@@ -16,7 +16,7 @@
             $(this).addClass("column_name-" + number2.toString());
         });
 
-        this.bind("contextmenu", function (event) {
+        this.bind("contextmenu", function () {
             var sub_menu = '<div class="columns_dropdown"><ul>';
             for (var i = 0; i < $(this).siblings().andSelf().length; i++) {
                 var check_mark = $(this).siblings().andSelf()[i].classList[1] == 'displayblock' ? 'displayblock' : 'displaynone';
