@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>
         Customize Columns
     </title>
@@ -84,7 +84,8 @@
 <script type="text/javascript" src="js/custom_column.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
-        $(".heading").column_grid();
+        var options = { "warning_timeout": 3000, "warning_msg": "Must Have Minimum Five Columns." };
+        $(".heading").column_grid(options);
     });
 </script>
 
