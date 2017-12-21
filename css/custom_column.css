@@ -4,9 +4,11 @@
     min-height: 500px;
     min-width: 1024px;
     padding: 10px;
+    display: table;
 }
 .col-md-12{
     padding: 0%;
+    display: flow-root;
 }
 .heading, .data {
     float: left !important;

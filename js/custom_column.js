@@ -1,6 +1,10 @@
 
 (function ($) {
-    $.fn.column_grid = (function () {
+    $.fn.column_grid = (function (options) {
+        if (options == undefined) {
+            options = { "warning_timeout": 3000, "warning_msg": "Must Have Minimum 5 Columns." };
+        }
+
         var number1 = 0;
         var number2 = 0;
         $('.heading').each(function () {
@@ -35,10 +39,10 @@
 
                         $(".column_toggle." + $(this).context.classList[1] + " > .fa-check").removeClass("displayblock").addClass("displaynone");
                     } else {
-                        $(".container").append('<div class="toast"><label>Must Have Minimum 5 Columns.</label></div>').fadeIn();
+                        $(".container").append('<div class="toast"><label>' + options.warning_msg + '</label></div>').fadeIn();
                         setTimeout(function () {
                             $(".toast").fadeOut().remove();
-                        }, 3000);
+                        }, options.warning_timeout);
                     }
 
                 } else {
