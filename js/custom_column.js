@@ -39,9 +39,9 @@
 
                         $(".column_toggle." + $(this).context.classList[1] + " > .fa-check").removeClass("displayblock").addClass("displaynone");
                     } else {
-                        $(".container").append('<div class="toast"><label>' + options.warning_msg + '</label></div>').fadeIn();
+                        $(".container").append('<div class="toast animated fadeInDown"><label>' + options.warning_msg + '</label></div>');
                         setTimeout(function () {
-                            $(".toast").fadeOut().remove();
+                            $(".toast").addClass("fadeOutUp").remove();
                         }, options.warning_timeout);
                     }
 

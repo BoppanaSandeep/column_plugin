@@ -108,10 +108,18 @@ li::-moz-selection {
     position: absolute;
     left: 35vw;
     color: white;
-    transition: 2s;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
     border-radius: 5px;
 }
 
 .copyright{
     float: left;
+}
+
+.animated {
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
